@@ -4,7 +4,9 @@ WORKDIR /opt/app
 
 COPY . .
 
-RUN mvn clean compile
+RUN mvn clean package
 
-CMD ["mvn", "spring-boot:run"]
+RUN cd target
+
+CMD ["java", "-jar", "backend.jar"]
 
