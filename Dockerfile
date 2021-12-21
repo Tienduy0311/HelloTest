@@ -4,11 +4,9 @@ WORKDIR /opt/app
 
 COPY . .
 
-RUN mvn clean package
-
-RUN cd target
+RUN mvn clean package -DskipTests
 
 RUN ls
 
-CMD ["java", "-jar", "backend.jar"]
+CMD ["java", "-jar", "target/backend.jar"]
 
