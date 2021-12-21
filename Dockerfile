@@ -8,5 +8,7 @@ RUN mvn clean package
 
 RUN cd target
 
+RUN ls
+
 CMD ["java", "-jar", "backend.jar"]
 
