@@ -4,6 +4,8 @@ WORKDIR /opt/app
 
 COPY . .
 
+ENV DUYNT_PROF=prod
+
 RUN mvn clean package -DskipTests
 
 RUN ls
